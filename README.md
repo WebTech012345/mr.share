@@ -72,7 +72,7 @@ You should now see the file-sharing system interface.
 ## File Structure
 
 ```plaintext
-project-root/
+mr.share-main/
 ├── public/                   # Contains static assets like CSS, JS, images
 │   ├── css/
 │   │   ├── styles.css         # External CSS styles
