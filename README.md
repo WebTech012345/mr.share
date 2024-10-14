@@ -27,7 +27,7 @@ Ensure that you have the following installed on your system:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/WebTech012345/mr.share.git
+git clone [https://github.com/WebTech012345/mr.share.git
 cd mr.share-main
 ```
 
