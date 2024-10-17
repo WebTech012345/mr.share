@@ -8,6 +8,9 @@ A secure file sharing system built with Node.js, Express, MongoDB, Multer for fi
 - **Password Protection**: Option to add a password to protect the file.
 - **Download Tracking**: Track how many times a file has been downloaded.
 - **File Sharing**: Generate shareable links for downloading files.
+- **Rate Limiting**: Protection against brute-force attacks.
+- **CSRF Protection**: Secure forms with CSRF tokens.
+- **Helmet**: Security headers added.
 
 ## Tech Stack
 - Node.js
@@ -16,6 +19,8 @@ A secure file sharing system built with Node.js, Express, MongoDB, Multer for fi
 - Multer (for file handling)
 - bcrypt (for password hashing)
 - EJS (for templating)
+- Helmet (for security)
+- Rate-limiter (for preventing brute force attacks)
 
 ## Setup Instructions
 
@@ -27,7 +32,7 @@ Ensure that you have the following installed on your system:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone [https://github.com/WebTech012345/mr.share.git
+git clone https://github.com/WebTech012345/mr.share.git
 cd mr.share-main
 ```
 
@@ -43,6 +48,7 @@ Create a `.env` file in the root of your project and add the following variables
 DATABASE_URL=mongodb://localhost:27017/your-database-name
 PORT=3000
 ```
+
 Replace `your-database-name` with your MongoDB database name. Ensure MongoDB is running locally or connect to a remote MongoDB instance.
 
 ### Step 4: Run the Application
@@ -50,6 +56,7 @@ To start the application, run:
 ```bash
 npm run myserver
 ```
+
 This will run the server on the port specified in the `.env` file (default is 3000).
 
 ### Step 5: Access the Application
@@ -102,6 +109,8 @@ mr.share-main/
 - `bcrypt`: Password hashing.
 - `dotenv`: For loading environment variables.
 - `ejs`: Templating engine.
+- `helmet`: For securing HTTP headers.
+- `express-rate-limit`: To limit repeated requests to public APIs.
 
 ## Future Improvements
 - Add email notifications for file sharing.
